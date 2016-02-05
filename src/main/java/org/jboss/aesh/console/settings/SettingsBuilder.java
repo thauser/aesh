@@ -210,6 +210,11 @@ public class SettingsBuilder {
         return this;
     }
 
+    public SettingsBuilder setExecuteOnEmpty(boolean executeOnEmpty){
+        settings.setExecuteOnEmpty(executeOnEmpty);
+        return this;
+    }
+
     public Settings create() {
         if(settings.isLogging())
             LoggerUtil.doLog();

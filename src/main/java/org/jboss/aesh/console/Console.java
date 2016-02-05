@@ -741,7 +741,7 @@ public class Console {
         try {
             //if the input length is 0 we should exit quickly
             //if we are stopping, dont print the prompt
-            if(result.length() == 0 && running) {
+            if(result.length() == 0 && running && !settings.getExecuteOnEmpty()) {
                 inputProcessor.clearBufferAndDisplayPrompt();
                 return;
             }

@@ -79,6 +79,7 @@ public class SettingsImpl implements Settings {
     private Resource resource;
     private String execute;
     private Resource executeFileAtStart;
+    private boolean executeOnBlank = false;
 
     protected SettingsImpl() {
     }
@@ -685,6 +686,12 @@ public class SettingsImpl implements Settings {
     public void setExecuteFileAtStart(Resource executeFileAtStart) {
         this.executeFileAtStart = executeFileAtStart;
     }
+
+    @Override
+    public void setExecuteOnEmpty(boolean executeOnEmpty){ this.executeOnBlank = executeOnEmpty; }
+
+    @Override
+    public boolean getExecuteOnEmpty() { return this.executeOnBlank; }
 
     @Override
     public Resource getExecuteFileAtStart() {

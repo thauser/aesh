@@ -251,6 +251,13 @@ public interface Settings extends Cloneable {
     void setExecuteFileAtStart(Resource executeFileAtStart);
 
     /**
+     * @param executeOnEmpty indicates whether to execute the execute() Callback method on empty input
+     */
+    void setExecuteOnEmpty(boolean executeOnEmpty);
+
+    boolean getExecuteOnEmpty();
+
+    /**
      * @return execute file at start
      */
     Resource getExecuteFileAtStart();
